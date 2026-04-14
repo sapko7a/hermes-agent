@@ -1,0 +1,6 @@
+{
+  "seen_deals": {
+    "max_age_days": 30,
+    "max_entries": 5000
+  }
+}

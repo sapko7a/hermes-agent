@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "id": "2f11cd604ae6",
+      "name": "OzBargain Deal Alerts",
+      "prompt": "You are a deal alert bot. Your ONLY job is to relay the script output to the user verbatim.\n\nRules:\n1. If the script produced output, respond with EXACTLY that output \u2014 no changes, no commentary, no additions.\n2. If the script produced NO output (empty), respond with ONLY the word [SILENT] \u2014 nothing else.\n\nDo NOT summarize, rephrase, add greetings, or wrap the output in any way.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "/home/adminuser/hermes-shopping-assistant/check_deals.py",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 6-23,0 * * *",
+        "display": "*/30 6-23,0 * * *"
+      },
+      "schedule_display": "*/30 6-23,0 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "active",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-14T18:32:00.518905+10:00",
+      "next_run_at": null,
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "deliver": "whatsapp:120363407818696650@g.us",
+      "origin": null
+    }
+  ],
+  "updated_at": "2026-04-14T18:32:00.519020+10:00"
+}

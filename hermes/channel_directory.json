@@ -1,0 +1,47 @@
+{
+  "updated_at": "2026-04-14T18:46:19.944904",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "5790571347",
+        "name": "velvetforce",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
+    "discord": [],
+    "whatsapp": [
+      {
+        "id": "61491734667403@lid",
+        "name": "Brad Sapkota",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "120363407818696650@g.us",
+        "name": "120363407818696650",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "120363408630007682@g.us",
+        "name": "120363408630007682",
+        "type": "group",
+        "thread_id": null
+      }
+    ],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": []
+  }
+}

@@ -1,0 +1,31 @@
+# Secrets — never commit
+.env
+auth.json
+
+# Runtime state — regenerated each run
+seen_deals.json
+seen_deals.json.bak
+gateway_state.json
+gateway.pid
+state.db
+state.db-wal
+state.db-shm
+
+# Caches
+__pycache__/
+*.pyc
+models_dev_cache.json
+.skills_prompt_snapshot.json
+
+# Logs
+logs/
+*.log
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
