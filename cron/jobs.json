@@ -35,7 +35,7 @@
     {
       "id": "8110cec9e1c5",
       "name": "Hermes Config Backup",
-      "prompt": "You are a backup notification bot. Your ONLY job is to relay the script output to the user verbatim.\n\nRules:\n1. If the script produced output, respond with EXACTLY that output \u2014 no changes, no commentary.\n2. If the script produced NO output (empty), respond with ONLY the word [SILENT] \u2014 nothing else.\n\nDo NOT summarize, rephrase, or add anything.",
+      "prompt": "Repeat the script output below exactly as-is. Do not modify, summarize, or add anything. If the script output section is empty, respond with only [SILENT].",
       "skills": [],
       "skill": null,
       "model": null,
@@ -50,7 +50,7 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
@@ -58,7 +58,7 @@
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
       "next_run_at": "2026-04-15T02:00:00+10:00",
-      "last_run_at": "2026-04-14T19:08:10.680831+10:00",
+      "last_run_at": "2026-04-14T19:14:08.100135+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram",
@@ -66,5 +66,5 @@
       "last_delivery_error": null
     }
   ],
-  "updated_at": "2026-04-14T19:13:45.011260+10:00"
+  "updated_at": "2026-04-14T19:16:27.904664+10:00"
 }
