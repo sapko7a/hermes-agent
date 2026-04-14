@@ -1,5 +1,5 @@
 model:
-  default: minimax/minimax-m2.7
+  default: openrouter/elephant-alpha
   provider: openrouter
   api_mode: chat_completions
   base_url: https://openrouter.ai/api/v1
