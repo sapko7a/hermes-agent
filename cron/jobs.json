@@ -41,7 +41,7 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "/home/adminuser/hermes-agent/backup.sh",
+      "script": "/home/adminuser/.hermes/scripts/backup.sh",
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *",
@@ -50,20 +50,21 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 2
       },
       "enabled": true,
-      "state": "active",
+      "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": null,
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-04-15T02:00:00+10:00",
+      "last_run_at": "2026-04-14T19:03:54.571201+10:00",
+      "last_status": "ok",
       "last_error": null,
       "deliver": "whatsapp:120363407818696650@g.us",
-      "origin": null
+      "origin": null,
+      "last_delivery_error": null
     }
   ],
-  "updated_at": "2026-04-14T18:56:53.990022+10:00"
+  "updated_at": "2026-04-14T19:03:54.572708+10:00"
 }

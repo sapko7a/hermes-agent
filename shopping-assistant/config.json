@@ -4,6 +4,7 @@
     "max_entries": 5000
   },
   "hot_deals": {
-    "min_votes": 15
+    "min_votes": 15,
+    "enabled": true
   }
 }
