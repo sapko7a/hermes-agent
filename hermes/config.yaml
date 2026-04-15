@@ -243,7 +243,7 @@ discord:
   auto_thread: true
   reactions: true
 whatsapp:
-  require_mention: false
+  require_mention: true
   free_response_chats:
   - 120363408630007682@g.us
   - 120363407818696650@g.us
@@ -256,6 +256,7 @@ approvals:
   mode: manual
   timeout: 60
 command_allowlist:
+- script execution via heredoc
 - script execution via -e/-c flag
 - delete in root path
 quick_commands: {}
