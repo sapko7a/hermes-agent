@@ -1,5 +1,5 @@
 model:
-  default: openrouter/elephant-alpha
+  default: xiaomi/mimo-v2-pro
   provider: openrouter
   api_mode: chat_completions
   base_url: https://openrouter.ai/api/v1
