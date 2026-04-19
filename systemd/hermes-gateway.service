@@ -11,7 +11,7 @@ WorkingDirectory=/home/adminuser/.hermes/hermes-agent
 Environment="PATH=/home/adminuser/.hermes/hermes-agent/venv/bin:/home/adminuser/.hermes/hermes-agent/node_modules/.bin:/usr/bin:/home/adminuser/.local/bin:/home/adminuser/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 Environment="VIRTUAL_ENV=/home/adminuser/.hermes/hermes-agent/venv"
 Environment="HERMES_HOME=/home/adminuser/.hermes"
-Restart=on-failure
+Restart=always
 RestartSec=30
 RestartForceExitStatus=75
 KillMode=mixed
