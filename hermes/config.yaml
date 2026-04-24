@@ -13,6 +13,7 @@ agent:
   max_turns: 90
   gateway_timeout: 1800
   restart_drain_timeout: 60
+  api_max_retries: 3
   service_tier: ''
   tool_use_enforcement: auto
   gateway_timeout_warning: 900
@@ -65,6 +66,8 @@ terminal:
   cwd: .
   timeout: 180
   env_passthrough: []
+  shell_init_files: []
+  auto_source_bashrc: true
   docker_image: nikolaik/python-nodejs:python3.11-nodejs20
   docker_forward_env: []
   docker_env: {}
@@ -84,6 +87,7 @@ browser:
   command_timeout: 30
   record_sessions: false
   allow_private_urls: false
+  cdp_url: ''
   camofox:
     managed_persistence: false
   cloud_provider: local
@@ -96,11 +100,17 @@ compression:
   threshold: 0.5
   target_ratio: 0.2
   protect_last_n: 20
-smart_model_routing:
-  enabled: false
-  max_simple_chars: 160
-  max_simple_words: 28
-  cheap_model: {}
+bedrock:
+  region: ''
+  discovery:
+    enabled: true
+    provider_filter: []
+    refresh_interval: 3600
+  guardrail:
+    guardrail_identifier: ''
+    guardrail_version: ''
+    stream_processing_mode: async
+    trace: disabled
 auxiliary:
   vision:
     provider: auto
@@ -108,6 +118,7 @@ auxiliary:
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
     download_timeout: 30
   web_extract:
     provider: auto
@@ -115,42 +126,57 @@ auxiliary:
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
   compression:
     provider: auto
     model: google/gemini-2.0-flash-exp:free
     base_url: ''
     api_key: ''
     timeout: 120
+    extra_body: {}
   session_search:
     provider: auto
     model: ''
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
+    max_concurrency: 3
   skills_hub:
     provider: auto
     model: ''
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
   approval:
     provider: auto
     model: ''
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
   mcp:
     provider: auto
     model: ''
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
   flush_memories:
     provider: auto
     model: ''
     base_url: ''
     api_key: ''
     timeout: 30
+    extra_body: {}
+  title_generation:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 30
+    extra_body: {}
 display:
   compact: false
   personality: kawaii
@@ -159,9 +185,13 @@ display:
   bell_on_complete: false
   show_reasoning: false
   streaming: true
+  final_response_markdown: strip
   inline_diffs: true
   show_cost: false
   skin: default
+  user_message_preview:
+    first_lines: 2
+    last_lines: 2
   interim_assistant_messages: true
   tool_progress_command: false
   tool_progress_overrides: {}
@@ -169,6 +199,8 @@ display:
   platforms: {}
   tool_progress: all
   background_process_notifications: all
+dashboard:
+  theme: default
 privacy:
   redact_pii: false
 tts:
@@ -181,6 +213,11 @@ tts:
   openai:
     model: gpt-4o-mini-tts
     voice: alloy
+  xai:
+    voice_id: eve
+    language: en
+    sample_rate: 24000
+    bit_rate: 128000
   mistral:
     model: voxtral-mini-tts-2603
     voice_id: c69964a6-ab8b-4f8a-9465-ec0925096ec8
@@ -203,6 +240,7 @@ voice:
   record_key: ctrl+b
   max_recording_seconds: 120
   auto_tts: false
+  beep_enabled: true
   silence_threshold: 200
   silence_duration: 3.0
 human_delay:
@@ -224,8 +262,13 @@ delegation:
   provider: ''
   base_url: ''
   api_key: ''
+  inherit_mcp_toolsets: true
   max_iterations: 50
+  child_timeout_seconds: 600
   reasoning_effort: ''
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: true
   default_toolsets:
   - terminal
   - file
@@ -233,6 +276,10 @@ delegation:
 prefill_messages_file: ''
 skills:
   external_dirs: []
+  template_vars: true
+  inline_shell: false
+  inline_shell_timeout: 10
+  guard_agent_created: false
   creation_nudge_interval: 15
 honcho: {}
 timezone: ''
@@ -242,6 +289,8 @@ discord:
   allowed_channels: ''
   auto_thread: true
   reactions: true
+  channel_prompts: {}
+  server_actions: ''
 whatsapp:
   require_mention: true
   free_response_chats:
@@ -252,16 +301,30 @@ whatsapp:
   - (?i)hermes
   - (?i)bot
   reply_prefix: ''
+  group_policy: allowlist
+  group_allow_from:
+  - 120363407818696650@g.us
+  - 120363408630007682@g.us
+telegram:
+  channel_prompts: {}
+slack:
+  channel_prompts: {}
+mattermost:
+  channel_prompts: {}
 approvals:
   mode: manual
   timeout: 60
+  cron_mode: deny
 command_allowlist:
 - script execution via heredoc
 - script execution via -e/-c flag
 - delete in root path
 quick_commands: {}
+hooks: {}
+hooks_auto_accept: false
 personalities: {}
 security:
+  allow_private_urls: false
   redact_secrets: true
   tirith_enabled: true
   tirith_path: tirith
@@ -273,13 +336,28 @@ security:
     shared_files: []
 cron:
   wrap_response: true
+  max_parallel_jobs: null
+code_execution:
+  mode: project
+  timeout: 300
+  max_tool_calls: 50
 logging:
   level: INFO
   max_size_mb: 5
   backup_count: 3
 network:
   force_ipv4: false
+sessions:
+  auto_prune: false
+  retention_days: 90
+  vacuum_after_prune: true
+  min_interval_hours: 24
 _config_version: 17
+smart_model_routing:
+  enabled: false
+  max_simple_chars: 160
+  max_simple_words: 28
+  cheap_model: {}
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -332,9 +410,6 @@ platform_toolsets:
   - hermes-signal
   homeassistant:
   - hermes-homeassistant
-code_execution:
-  timeout: 300
-  max_tool_calls: 50
 TELEGRAM_HOME_CHANNEL: '5790571347'
 WHATSAPP_HOME_CHANNEL: 61491734667403@lid
 
@@ -353,21 +428,8 @@ WHATSAPP_HOME_CHANNEL: 61491734667403@lid
 #   minimax      (MINIMAX_API_KEY)     — MiniMax
 #   minimax-cn   (MINIMAX_CN_API_KEY)  — MiniMax (China)
 #
-# For custom OpenAI-compatible endpoints, add base_url and api_key_env.
+# For custom OpenAI-compatible endpoints, add base_url and key_env.
 #
 # fallback_model:
 #   provider: openrouter
 #   model: anthropic/claude-sonnet-4
-#
-# ── Smart Model Routing ────────────────────────────────────────────────
-# Optional cheap-vs-strong routing for simple turns.
-# Keeps the primary model for complex work, but can route short/simple
-# messages to a cheaper model across providers.
-#
-# smart_model_routing:
-#   enabled: true
-#   max_simple_chars: 160
-#   max_simple_words: 28
-#   cheap_model:
-#     provider: openrouter
-#     model: google/gemini-2.5-flash

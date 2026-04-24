@@ -18,15 +18,15 @@
       "schedule_display": "*/30 6-23,0 * * *",
       "repeat": {
         "times": null,
-        "completed": 308
+        "completed": 346
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:32:00.518905+10:00",
-      "next_run_at": "2026-04-24T06:00:00+10:00",
-      "last_run_at": "2026-04-24T00:30:54.435696+10:00",
+      "next_run_at": "2026-04-25T06:00:00+10:00",
+      "last_run_at": "2026-04-25T00:30:48.904202+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "whatsapp:120363407818696650@g.us",
@@ -51,15 +51,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": "2026-04-25T02:00:00+10:00",
-      "last_run_at": "2026-04-23T02:00:42.354598+10:00",
+      "next_run_at": "2026-04-26T02:00:00+10:00",
+      "last_run_at": "2026-04-24T02:01:08.347961+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram",
@@ -84,15 +84,15 @@
       "schedule_display": "0 6-22 * * *",
       "repeat": {
         "times": 238,
-        "completed": 103
+        "completed": 120
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-17T23:18:27.771027+10:00",
-      "next_run_at": "2026-04-24T06:00:00+10:00",
-      "last_run_at": "2026-04-23T22:01:08.657416+10:00",
+      "next_run_at": "2026-04-25T06:00:00+10:00",
+      "last_run_at": "2026-04-24T22:00:35.692125+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -100,5 +100,5 @@
       "origin": null
     }
   ],
-  "updated_at": "2026-04-24T02:00:55.016397+10:00"
+  "updated_at": "2026-04-25T02:00:56.720213+10:00"
 }
