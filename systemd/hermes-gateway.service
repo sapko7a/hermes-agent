@@ -17,7 +17,7 @@ RestartForceExitStatus=75
 KillMode=mixed
 KillSignal=SIGTERM
 ExecReload=/bin/kill -USR1 $MAINPID
-TimeoutStopSec=60
+TimeoutStopSec=90
 StandardOutput=journal
 StandardError=journal
 

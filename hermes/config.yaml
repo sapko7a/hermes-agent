@@ -1,5 +1,5 @@
 model:
-  default: qwen/qwen3.6-plus
+  default: moonshotai/kimi-k2.6
   provider: openrouter
   base_url: https://openrouter.ai/api/v1
   api_mode: chat_completions
@@ -95,6 +95,10 @@ checkpoints:
   enabled: true
   max_snapshots: 50
 file_read_max_chars: 100000
+tool_output:
+  max_bytes: 50000
+  max_lines: 2000
+  max_line_length: 2000
 compression:
   enabled: true
   threshold: 0.5
@@ -316,8 +320,9 @@ approvals:
   timeout: 60
   cron_mode: deny
 command_allowlist:
-- script execution via heredoc
 - script execution via -e/-c flag
+- stop/restart system service
+- script execution via heredoc
 - delete in root path
 quick_commands: {}
 hooks: {}
