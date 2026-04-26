@@ -1,8 +1,8 @@
 model:
   default: moonshotai/kimi-k2.6
   provider: openrouter
-  base_url: https://openrouter.ai/api/v1
   api_mode: chat_completions
+  base_url: https://openrouter.ai/api/v1
 providers: {}
 fallback_providers: []
 credential_pool_strategies:
@@ -88,6 +88,8 @@ browser:
   record_sessions: false
   allow_private_urls: false
   cdp_url: ''
+  dialog_policy: must_respond
+  dialog_timeout_s: 300
   camofox:
     managed_persistence: false
   cloud_provider: local
@@ -104,6 +106,8 @@ compression:
   threshold: 0.5
   target_ratio: 0.2
   protect_last_n: 20
+prompt_caching:
+  cache_ttl: 5m
 bedrock:
   region: ''
   discovery:
@@ -167,14 +171,14 @@ auxiliary:
     api_key: ''
     timeout: 30
     extra_body: {}
-  flush_memories:
+  title_generation:
     provider: auto
     model: ''
     base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}
-  title_generation:
+  flush_memories:
     provider: auto
     model: ''
     base_url: ''
@@ -273,6 +277,7 @@ delegation:
   max_concurrent_children: 3
   max_spawn_depth: 1
   orchestrator_enabled: true
+  subagent_auto_approve: false
   default_toolsets:
   - terminal
   - file
