@@ -1,5 +1,5 @@
 model:
-  default: x-ai/grok-4.3
+  default: tencent/hy3-preview:free
   provider: openrouter
   api_mode: chat_completions
   base_url: https://openrouter.ai/api/v1
