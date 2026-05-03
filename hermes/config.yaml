@@ -1,5 +1,5 @@
 model:
-  default: tencent/hy3-preview:free
+  default: moonshotai/kimi-k2.6
   provider: openrouter
   api_mode: chat_completions
   base_url: https://openrouter.ai/api/v1
@@ -418,7 +418,8 @@ sessions:
   vacuum_after_prune: true
   min_interval_hours: 24
 onboarding:
-  seen: {}
+  seen:
+    busy_input_prompt: true
 updates:
   pre_update_backup: false
   backup_keep: 5
