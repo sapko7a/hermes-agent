@@ -362,6 +362,13 @@ whatsapp:
 telegram:
   reactions: false
   channel_prompts: {}
+  require_mention: true
+  allow_from:
+  - '5790571347'
+  group_allow_from:
+  - '5790571347'
+  free_response_chats:
+  - '-5289312653'
 slack:
   channel_prompts: {}
 mattermost:
@@ -372,10 +379,11 @@ approvals:
   cron_mode: deny
   mcp_reload_confirm: true
 command_allowlist:
-- script execution via -e/-c flag
 - stop/restart system service
-- script execution via heredoc
+- stop/restart hermes gateway (kills running agents)
 - delete in root path
+- script execution via heredoc
+- script execution via -e/-c flag
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false

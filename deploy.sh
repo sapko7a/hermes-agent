@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Deploy Hermes agent config to exp-vm.
 # Usage: ./deploy.sh [target]
-#   target: all (default), shopping, hermes, cron, systemd
+#   target: all (default), shopping, hermes, cron, systemd, halfprice
 
 set -euo pipefail
 
@@ -33,12 +33,20 @@ deploy_systemd() {
     echo "  Reload: ssh $VM 'systemctl --user daemon-reload && systemctl --user restart hermes-gateway'"
 }
 
+deploy_halfprice() {
+    echo "→ Half-price job..."
+    rsync -av --exclude='__pycache__/' --exclude='logs/' \
+        scripts/hermes-shopping-assistant/halfprice_to_grocy.py \
+        "$VM:~/.hermes/scripts/hermes-shopping-assistant/"
+}
+
 case "$TARGET" in
-    all)       deploy_shopping; deploy_hermes; deploy_cron; deploy_systemd ;;
+    all)       deploy_shopping; deploy_hermes; deploy_cron; deploy_systemd; deploy_halfprice ;;
     shopping)  deploy_shopping ;;
     hermes)    deploy_hermes ;;
     cron)      deploy_cron ;;
     systemd)   deploy_systemd ;;
+    halfprice) deploy_halfprice ;;
     *)         echo "Unknown target: $TARGET"; exit 1 ;;
 esac
 

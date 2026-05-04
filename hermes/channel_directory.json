@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-04T01:59:20.542933",
+  "updated_at": "2026-05-05T01:55:54.467344",
   "platforms": {
     "telegram": [
       {
         "id": "5790571347",
         "name": "velvetforce",
         "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-5289312653",
+        "name": "Shopping Bot - Hermes",
+        "type": "group",
         "thread_id": null
       }
     ],
