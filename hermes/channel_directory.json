@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-06T01:59:36.684156",
+  "updated_at": "2026-05-07T01:55:33.033921",
   "platforms": {
     "telegram": [
       {
@@ -11,6 +11,18 @@
       {
         "id": "-5289312653",
         "name": "Shopping Bot - Hermes",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "-5266237932",
+        "name": "Grocy Shopping Chat",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "-5276011116",
+        "name": "Ozbargain Alerts",
         "type": "group",
         "thread_id": null
       }
