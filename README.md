@@ -23,3 +23,7 @@ API keys live in `~/.hermes/.env` on the VM (not in this repo). See `hermes/.env
 ./deploy.sh shopping     # Just the deal checker
 ./deploy.sh cron         # Just cron jobs (restart gateway after)
 ```
+
+## Backup & restore
+
+`backup.sh` runs daily at 2am via the Hermes cron job `Hermes Config Backup` (id `8110cec9e1c5`). It copies live config into this repo and pushes to GitHub. To restore on a new machine, see [RESTORE.md](RESTORE.md).
