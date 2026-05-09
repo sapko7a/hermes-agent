@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-07T01:55:33.033921",
+  "updated_at": "2026-05-10T01:55:18.034307",
   "platforms": {
     "telegram": [
       {
@@ -23,6 +23,12 @@
       {
         "id": "-5276011116",
         "name": "Ozbargain Alerts",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "-5102076701",
+        "name": "Woolies/Coles Half Price Group",
         "type": "group",
         "thread_id": null
       }
@@ -62,6 +68,7 @@
     "email": [],
     "sms": [],
     "dingtalk": [],
+    "msgraph_webhook": [],
     "feishu": [],
     "wecom": [],
     "wecom_callback": [],
@@ -69,6 +76,7 @@
     "bluebubbles": [],
     "qqbot": [],
     "yuanbao": [],
+    "google_chat": [],
     "irc": [],
     "teams": []
   }

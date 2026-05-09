@@ -18,20 +18,21 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 778
+        "completed": 1066
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:32:00.518905+10:00",
-      "next_run_at": "2026-05-07T02:15:00+10:00",
-      "last_run_at": "2026-05-07T01:45:32.931822+10:00",
+      "next_run_at": "2026-05-10T02:15:00+10:00",
+      "last_run_at": "2026-05-10T01:46:17.956864+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram:-5276011116",
       "origin": null,
-      "last_delivery_error": null
+      "last_delivery_error": null,
+      "no_agent": true
     },
     {
       "id": "8110cec9e1c5",
@@ -42,7 +43,7 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "/home/adminuser/.hermes/scripts/backup.sh",
+      "script": "backup.py",
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *",
@@ -51,20 +52,21 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": "2026-05-08T02:00:00+10:00",
-      "last_run_at": "2026-05-06T02:01:22.673481+10:00",
+      "next_run_at": "2026-05-11T02:00:00+10:00",
+      "last_run_at": "2026-05-09T02:15:28.485307+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram",
       "origin": null,
-      "last_delivery_error": null
+      "last_delivery_error": null,
+      "no_agent": true
     },
     {
       "id": "0e807ccc3d98",
@@ -84,21 +86,22 @@
       "schedule_display": "0 8 * * 6",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-26T01:35:05.269479+10:00",
-      "next_run_at": "2026-05-09T08:00:00+10:00",
-      "last_run_at": "2026-05-02T08:02:12.183547+10:00",
+      "next_run_at": "2026-05-16T08:00:00+10:00",
+      "last_run_at": "2026-05-09T08:04:06.305861+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5266237932",
       "origin": null,
-      "enabled_toolsets": null
+      "enabled_toolsets": null,
+      "no_agent": true
     },
     {
       "id": "a88e000a2642",
@@ -118,32 +121,33 @@
       "schedule_display": "0 18 * * 5",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-26T01:35:10.973938+10:00",
-      "next_run_at": "2026-05-08T18:00:00+10:00",
-      "last_run_at": "2026-05-01T18:03:53.336361+10:00",
+      "next_run_at": "2026-05-15T18:00:00+10:00",
+      "last_run_at": "2026-05-08T18:03:23.551338+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5266237932",
       "origin": null,
-      "enabled_toolsets": null
+      "enabled_toolsets": null,
+      "no_agent": true
     },
     {
       "id": "06ea1de9088f",
-      "name": "Weekly Coles & Woolies Half Price \u2192 Grocy",
-      "prompt": "You are a shopping assistant bot. Your ONLY job is to relay the script output to the user verbatim.\n\nRules:\n- Do NOT summarize, paraphrase, or interpret.\n- Do NOT add emojis, formatting, or commentary.\n- If the script output is empty or contains only whitespace or '[SILENT]', respond with exactly [SILENT].\n- Otherwise, output the script output exactly as-is.\n- Preserve all line breaks, punctuation, and markdown (e.g. *, -, \u2022).",
+      "name": "Weekly My Woolies & Coles List + All Sales \u2192 Grocy",
+      "prompt": "You are a shopping assistant bot. Your ONLY job is to relay the script output to the user verbatim.\n\nRules:\n- If the script output is exactly [SILENT], output exactly [SILENT].\n- Otherwise, copy the script output as-is.\n- Do not add analysis, commentary, or extra formatting.\n\nThis job updates Grocy shopping lists:\n- My Woolies & Coles List: matching half-price specials for items on the user's source shopping list.\n- All Woolies-Coles Sales: all fetched Coles/Woolworths half-price specials for Telegram sale lookup.",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "/home/adminuser/.hermes/scripts/hermes-shopping-assistant/halfprice_to_grocy.py",
+      "script": "hermes-shopping-assistant/halfprice_to_grocy.py",
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * 3",
@@ -164,10 +168,11 @@
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "telegram:-5266237932",
+      "deliver": "telegram:-5102076701",
       "origin": null,
-      "enabled_toolsets": null
+      "enabled_toolsets": null,
+      "no_agent": true
     }
   ],
-  "updated_at": "2026-05-07T02:00:33.091324+10:00"
+  "updated_at": "2026-05-10T02:00:18.086090+10:00"
 }
