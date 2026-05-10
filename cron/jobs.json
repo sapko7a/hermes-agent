@@ -18,15 +18,15 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1066
+        "completed": 1163
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:32:00.518905+10:00",
-      "next_run_at": "2026-05-10T02:15:00+10:00",
-      "last_run_at": "2026-05-10T01:46:17.956864+10:00",
+      "next_run_at": "2026-05-11T02:15:00+10:00",
+      "last_run_at": "2026-05-11T02:00:17.602582+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram:-5276011116",
@@ -52,15 +52,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": "2026-05-11T02:00:00+10:00",
-      "last_run_at": "2026-05-09T02:15:28.485307+10:00",
+      "next_run_at": "2026-05-12T02:00:00+10:00",
+      "last_run_at": "2026-05-10T02:00:25.206947+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram",
@@ -174,5 +174,5 @@
       "no_agent": true
     }
   ],
-  "updated_at": "2026-05-10T02:00:18.086090+10:00"
+  "updated_at": "2026-05-11T02:00:17.603658+10:00"
 }
