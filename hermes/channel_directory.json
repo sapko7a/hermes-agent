@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T01:55:13.563344",
+  "updated_at": "2026-05-15T01:59:36.275912",
   "platforms": {
     "telegram": [
       {
@@ -78,6 +78,7 @@
     "yuanbao": [],
     "google_chat": [],
     "irc": [],
+    "line": [],
     "teams": []
   }
 }

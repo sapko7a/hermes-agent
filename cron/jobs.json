@@ -18,15 +18,15 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1451
+        "completed": 1547
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:32:00.518905+10:00",
-      "next_run_at": "2026-05-14T02:15:00+10:00",
-      "last_run_at": "2026-05-14T02:00:15.573536+10:00",
+      "next_run_at": "2026-05-15T02:15:00+10:00",
+      "last_run_at": "2026-05-15T02:00:40.078189+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram:-5276011116",
@@ -52,15 +52,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": "2026-05-15T02:00:00+10:00",
-      "last_run_at": "2026-05-13T02:00:28.710597+10:00",
+      "next_run_at": "2026-05-16T02:00:00+10:00",
+      "last_run_at": "2026-05-14T02:00:31.725284+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram",
@@ -140,8 +140,8 @@
     },
     {
       "id": "06ea1de9088f",
-      "name": "Weekly My Woolies & Coles List + All Sales \u2192 Grocy",
-      "prompt": "You are a shopping assistant bot. Your ONLY job is to relay the script output to the user verbatim.\n\nRules:\n- If the script output is exactly [SILENT], output exactly [SILENT].\n- Otherwise, copy the script output as-is.\n- Do not add analysis, commentary, or extra formatting.\n\nThis job updates Grocy shopping lists:\n- My Woolies & Coles List: matching half-price specials for items on the user's source shopping list.\n- All Woolies-Coles Sales: all fetched Coles/Woolworths half-price specials for Telegram sale lookup.",
+      "name": "Weekly My Woolies & Coles List + Sales Cache",
+      "prompt": "You are a shopping assistant bot. Your ONLY job is to relay the script output to the user verbatim.\n\nRules:\n- If the script output is exactly [SILENT], output exactly [SILENT].\n- Otherwise, copy the script output as-is.\n- Do not add analysis, commentary, or extra formatting.\n\nThis job updates shopping assistant sale data:\n- My Woolies & Coles List in Grocy: matching half-price specials for items on the user's Weekly Shopping list.\n- Local SQLite all-sales cache: all fetched Coles/Woolworths half-price specials for Telegram sale lookup.\n\nDo not describe this as updating the old Grocy All Woolies-Coles Sales list; that generated Grocy list has been migrated out of Grocy for performance.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -156,7 +156,7 @@
       "schedule_display": "0 7 * * 3",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
@@ -164,9 +164,9 @@
       "paused_reason": null,
       "created_at": "2026-05-04T22:19:43.871277+10:00",
       "next_run_at": "2026-05-20T07:00:00+10:00",
-      "last_run_at": "2026-05-13T07:00:27.956467+10:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/adminuser/.hermes/hermes-agent/venv/lib/python3.11/site-packages/requests/models.py\", line 978, in json\n    return complexjson.loads(self.text, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/adminuser/.hermes/scripts/hermes-shopping-assistant/halfprice_to_grocy.py\", line 1314, in <module>\n    sys.exit(main(sys.argv[1:]))\n             ^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.hermes/scripts/hermes-shopping-assistant/halfprice_to_grocy.py\", line 1170, in main\n    info = client.system_info()\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.hermes/scripts/hermes-shopping-assistant/grocy_client.py\", line 121, in system_info\n    return self.get(\"system/info\")\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.hermes/scripts/hermes-shopping-assistant/grocy_client.py\", line 107, in get\n    return self._request(\"GET\", path, params=params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/adminuser/.hermes/scripts/hermes-shopping-assistant/grocy_client.py\", line 104, in _request\n    return resp.json()\n           ^^^^^^^^^^^\n  File \"/home/adminuser/.hermes/hermes-agent/venv/lib/python3.11/site-packages/requests/models.py\", line 982, in json\n    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "last_run_at": "2026-05-14T22:15:40.380496+10:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5102076701",
       "origin": null,
@@ -174,5 +174,5 @@
       "no_agent": true
     }
   ],
-  "updated_at": "2026-05-14T02:00:15.574631+10:00"
+  "updated_at": "2026-05-15T02:00:40.079421+10:00"
 }

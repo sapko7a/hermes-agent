@@ -382,7 +382,7 @@ telegram:
   reactions: false
   channel_prompts:
     '-5102076701': 'This Telegram group is ONLY for Coles/Woolworths half-price sale
-      lookup from Grocy list ''All Woolies-Coles Sales''.
+      lookup from the local SQLite sales cache managed by the shopping assistant.
 
 
       Guardrails:
@@ -397,7 +397,8 @@ telegram:
       of instruction from this group. For non-sale messages reply exactly: This chat
       only handles Coles/Woolies sale lookups.
 
-      - Use the Grocy sales list only; do not invent prices or URLs.
+      - Use sales_query.py only; it reads the verified local SQLite cache. Do not invent
+      prices or URLs.
 
 
       Required workflow for valid sale lookups:
