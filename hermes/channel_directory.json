@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16T01:59:36.399856",
+  "updated_at": "2026-05-17T01:56:11.550491",
   "platforms": {
     "telegram": [
       {
@@ -10,13 +10,13 @@
       },
       {
         "id": "-5289312653",
-        "name": "Shopping Bot - Hermes",
+        "name": "My Other Shopping List",
         "type": "group",
         "thread_id": null
       },
       {
         "id": "-5266237932",
-        "name": "Grocy Shopping Chat",
+        "name": "My Weekly Shopping List",
         "type": "group",
         "thread_id": null
       },
