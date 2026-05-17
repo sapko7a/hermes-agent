@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T01:56:11.550491",
+  "updated_at": "2026-05-18T01:59:46.403650",
   "platforms": {
     "telegram": [
       {
@@ -10,13 +10,13 @@
       },
       {
         "id": "-5289312653",
-        "name": "My Other Shopping List",
+        "name": "My Other Shopping List Chat",
         "type": "group",
         "thread_id": null
       },
       {
         "id": "-5266237932",
-        "name": "My Weekly Shopping List",
+        "name": "My Weekly Shopping List Chat",
         "type": "group",
         "thread_id": null
       },
@@ -29,6 +29,12 @@
       {
         "id": "-5102076701",
         "name": "Woolies/Coles Half Price Group",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "-5225272802",
+        "name": "My Product Research Chat",
         "type": "group",
         "thread_id": null
       }
