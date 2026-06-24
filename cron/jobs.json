@@ -18,15 +18,15 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 4803
+        "completed": 4899
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:32:00.518905+10:00",
-      "next_run_at": "2026-06-24T02:15:00+10:00",
-      "last_run_at": "2026-06-24T02:00:24.707611+10:00",
+      "next_run_at": "2026-06-25T02:15:00+10:00",
+      "last_run_at": "2026-06-25T02:00:14.322124+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram:-5276011116",
@@ -53,21 +53,22 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 69
+        "completed": 70
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": "2026-06-25T02:00:00+10:00",
-      "last_run_at": "2026-06-17T02:00:23.805522+10:00",
+      "next_run_at": "2026-06-26T02:00:00+10:00",
+      "last_run_at": "2026-06-24T02:00:33.055530+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram",
       "origin": null,
       "last_delivery_error": null,
-      "no_agent": true
+      "no_agent": true,
+      "fire_claim": null
     },
     {
       "id": "0e807ccc3d98",
@@ -157,22 +158,23 @@
       "schedule_display": "0 7 * * 3",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T22:19:43.871277+10:00",
-      "next_run_at": "2026-06-24T07:00:00+10:00",
-      "last_run_at": "2026-06-17T07:06:53.619098+10:00",
+      "next_run_at": "2026-07-01T07:00:00+10:00",
+      "last_run_at": "2026-06-24T07:03:02.665979+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5102076701",
       "origin": null,
       "enabled_toolsets": null,
-      "no_agent": true
+      "no_agent": true,
+      "fire_claim": null
     },
     {
       "id": "c03d8288a9dd",
@@ -194,15 +196,15 @@
       "schedule_display": "*/30 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1561
+        "completed": 1609
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T11:36:26.059184+10:00",
-      "next_run_at": "2026-06-24T02:30:00+10:00",
-      "last_run_at": "2026-06-24T02:00:24.364773+10:00",
+      "next_run_at": "2026-06-25T02:30:00+10:00",
+      "last_run_at": "2026-06-25T02:00:13.993822+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -215,5 +217,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-24T02:00:24.709855+10:00"
+  "updated_at": "2026-06-25T02:00:14.323356+10:00"
 }
