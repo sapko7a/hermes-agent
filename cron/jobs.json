@@ -18,15 +18,15 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 6147
+        "completed": 6243
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:32:00.518905+10:00",
-      "next_run_at": "2026-07-08T02:15:00+10:00",
-      "last_run_at": "2026-07-08T02:00:13.120160+10:00",
+      "next_run_at": "2026-07-09T02:15:00+10:00",
+      "last_run_at": "2026-07-09T02:00:58.721095+10:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "telegram:-5276011116",
@@ -53,17 +53,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 83
+        "completed": 84
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-14T18:56:53.989898+10:00",
-      "next_run_at": "2026-07-09T02:00:00+10:00",
-      "last_run_at": "2026-07-07T02:00:36.775139+10:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-07-10T02:00:00+10:00",
+      "last_run_at": "2026-07-08T02:02:28.275300+10:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstderr:\n*Backup failed* \u2014 git push error: ssh: connect to host github.com port 22: Connection timed out\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.",
       "deliver": "telegram",
       "origin": null,
       "last_delivery_error": null,
@@ -158,15 +158,15 @@
       "schedule_display": "0 7 * * 3",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T22:19:43.871277+10:00",
-      "next_run_at": "2026-07-08T07:00:00+10:00",
-      "last_run_at": "2026-07-01T07:02:05.377620+10:00",
+      "next_run_at": "2026-07-15T07:00:00+10:00",
+      "last_run_at": "2026-07-08T07:02:28.002926+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -196,15 +196,15 @@
       "schedule_display": "*/30 * * * *",
       "repeat": {
         "times": null,
-        "completed": 2233
+        "completed": 2281
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T11:36:26.059184+10:00",
-      "next_run_at": "2026-07-08T02:30:00+10:00",
-      "last_run_at": "2026-07-08T02:00:12.796076+10:00",
+      "next_run_at": "2026-07-09T02:30:00+10:00",
+      "last_run_at": "2026-07-09T02:00:58.471501+10:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -217,5 +217,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-08T02:00:13.121260+10:00"
+  "updated_at": "2026-07-09T02:00:58.722299+10:00"
 }
