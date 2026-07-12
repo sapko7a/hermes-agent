@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T01:59:03.977057",
+  "updated_at": "2026-07-13T01:59:33.657170",
   "platforms": {
     "telegram": [
       {
@@ -45,12 +45,6 @@
         "id": "61491734667403@lid",
         "name": "Brad Sapkota",
         "type": "dm",
-        "thread_id": null
-      },
-      {
-        "id": "120363408630007682@g.us",
-        "name": "120363408630007682",
-        "type": "group",
         "thread_id": null
       },
       {
