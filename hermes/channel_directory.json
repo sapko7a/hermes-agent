@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T01:57:53.922921",
+  "updated_at": "2026-07-31T01:58:30.833280",
   "platforms": {
     "telegram": [
       {
@@ -40,20 +40,7 @@
       }
     ],
     "discord": [],
-    "whatsapp": [
-      {
-        "id": "120363407818696650@g.us",
-        "name": "120363407818696650",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "61491734667403@lid",
-        "name": "Brad Sapkota",
-        "type": "dm",
-        "thread_id": null
-      }
-    ],
+    "whatsapp": [],
     "whatsapp_cloud": [],
     "slack": [],
     "signal": [],
