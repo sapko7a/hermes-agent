@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T01:58:05.235354",
+  "updated_at": "2026-08-08T01:58:46.189073",
   "platforms": {
     "telegram": [
       {
@@ -23,12 +23,6 @@
       {
         "id": "-5276011116",
         "name": "Ozbargain Alerts",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "-5102076701",
-        "name": "Woolies/Coles Half Price Group",
         "type": "group",
         "thread_id": null
       },
